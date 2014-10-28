@@ -50,6 +50,10 @@ echo "The Dow Jones industrials closed at 2569.26 ." | luajit -lsenna.run
          .         .         *         *                   -         *
 ```
 
+Please look into the example usage file (`run.lua`) if you want to use the
+interface on your own in LuaJIT. It provides a good overview on how things
+work.
+
 ## Interface Description
 
 The LuaJIT interface provides several objects encapsulating _SENNA_'s tools.
@@ -187,3 +191,9 @@ must also provide a list of words considered as verbs in
 `usr_verb_labels`. The list must be a list of booleans, of the size of the
 number of tokens in the sentence. A boolean at true means the corresponding
 word will be considered as a verb.
+
+### Additional available functions
+
+#### senna.verbose(flag)
+
+Set _SENNA_'s verbose mode to `flag` (`true` or `false`).
